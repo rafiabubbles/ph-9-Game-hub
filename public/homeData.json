@@ -1,0 +1,31 @@
+[
+  {
+    "id": "1",
+    "title": "Guns of Boom",
+    "coverPhoto": "https://cdn.gamestatic.net/files/gameland/games/24848246-ea7b-11e8-975b-02da6d1ffc43/pic_poster_m.jpg",
+    "category": "FPS",
+    "downloadLink": "https://play.google.com/store/apps/details?id=com.gameinsight.gunsofbummobile",
+    "description": "Guns of Boom (also known as Gods of Boom) is a lively mobile team-based multiplayer FPS with stylised graphics and team deathmatch action. :contentReference[oaicite:3]{index=3}",
+    "ratings": "4.3",
+    "developer": "Game Insight"
+  },
+  {
+    "id": "2",
+    "title": "Call of Duty®: Mobile",
+    "coverPhoto": "https://assets1.ignimgs.com/2016/05/02/call-of-duty-infinite-warfare-button-00jpg-652c71.jpg",
+    "category": "FPS",
+    "downloadLink": "https://www.callofduty.com/mobile",
+    "description": "Call of Duty: Mobile brings console quality FPS to mobile devices with multiplayer, battle royale and seasonal content. :contentReference[oaicite:0]{index=0}",
+    "ratings": "4.7",
+    "developer": "Activision"
+  },
+  {
+    "id": "3",
+    "title": "Modern Combat 5: mobile FPS",
+    "coverPhoto": "https://play-lh.googleusercontent.com/N5OhX0Em8Uuu5B4JaXKZmwzy-0UUfGiF3OjDxdGic1m49DJyNujFgPFZSa0AJf4hiIKP",
+    "category": "FPS",
+    "downloadLink": "https://www.gameloft.com/game/modern-combat-5",
+    "description": "Modern Combat 5 is a classic mobile FPS offering online multiplayer, numerous classes and fast-paced warfare. :contentReference[oaicite:1]{index=1}",
+    "ratings": "4.4",
+    "developer": "Gameloft"
+  }]

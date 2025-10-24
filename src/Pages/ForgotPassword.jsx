@@ -9,7 +9,7 @@ const ForgotPassword = () => {
     const location = useLocation();
     const navigate = useNavigate();
 
-    // ✅ Auto-fill email if it was passed from login page
+
     useEffect(() => {
         const stateEmail = location.state?.email || "";
         setEmail(stateEmail);
@@ -31,7 +31,7 @@ const ForgotPassword = () => {
                 text: "Please check your Gmail to reset your password.",
             });
 
-            // ✅ Redirect user to Gmail
+            // Redirect user to Gmail
             window.location.href = "https://mail.google.com/";
         } catch (error) {
             Swal.fire("Error", error.message, "error");

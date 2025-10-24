@@ -1,21 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiArrowLeft, HiArrowRight } from "react-icons/hi";
-import GameData from "../../public/HomeData.json";
 
 const DetailButton = ({ text, onClick }) => (
     <motion.button
         onClick={onClick}
         className="
-            flex items-center justify-center space-x-2
-            py-3 px-6 rounded-xl font-extrabold text-white text-lg
-            bg-gradient-to-r from-[#8a2be2] to-[#ff00ff]
-            border border-[#a020f0]
-            shadow-[0_0_15px_rgba(138,43,226,0.6)]
-            transition duration-300 ease-in-out
-            hover:shadow-[0_0_20px_rgba(255,0,255,0.8)]
-            whitespace-nowrap
-        "
+      flex items-center justify-center space-x-2
+      py-3 px-6 rounded-xl font-extrabold text-white text-lg
+      bg-gradient-to-r from-[#8a2be2] to-[#ff00ff]
+      border border-[#a020f0]
+      shadow-[0_0_15px_rgba(138,43,226,0.6)]
+      transition duration-300 ease-in-out
+      hover:shadow-[0_0_20px_rgba(255,0,255,0.8)]
+      whitespace-nowrap
+    "
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
     >
@@ -25,13 +24,38 @@ const DetailButton = ({ text, onClick }) => (
 );
 
 const BannerSlider = () => {
-    const images = GameData.slice(0, 5).map(game => ({
-        id: game.id,
-        src: game.coverPhoto || null,
-        alt: game.title,
-        title: game.title,
-        downloadLink: game.downloadLink
-    }));
+    // banner data
+    const images = [
+        {
+            "id": "1",
+            "title": "Guns of Boom",
+            "coverPhoto": "https://cdn.gamestatic.net/files/gameland/games/24848246-ea7b-11e8-975b-02da6d1ffc43/pic_poster_m.jpg",
+            "category": "FPS",
+            "downloadLink": "https://play.google.com/store/apps/details?id=com.gameinsight.gunsofbummobile",
+            "description": "Guns of Boom (also known as Gods of Boom) is a lively mobile team-based multiplayer FPS with stylised graphics and team deathmatch action. :contentReference[oaicite:3]{index=3}",
+            "ratings": "4.3",
+            "developer": "Game Insight"
+        },
+        {
+            "id": "2",
+            "title": "Call of Duty®: Mobile",
+            "coverPhoto": "https://assets1.ignimgs.com/2016/05/02/call-of-duty-infinite-warfare-button-00jpg-652c71.jpg",
+            "category": "FPS",
+            "downloadLink": "https://www.callofduty.com/mobile",
+            "description": "Call of Duty: Mobile brings console quality FPS to mobile devices with multiplayer, battle royale and seasonal content. :contentReference[oaicite:0]{index=0}",
+            "ratings": "4.7",
+            "developer": "Activision"
+        },
+        {
+            "id": "3",
+            "title": "Modern Combat 5: mobile FPS",
+            "coverPhoto": "https://play-lh.googleusercontent.com/N5OhX0Em8Uuu5B4JaXKZmwzy-0UUfGiF3OjDxdGic1m49DJyNujFgPFZSa0AJf4hiIKP",
+            "category": "FPS",
+            "downloadLink": "https://www.gameloft.com/game/modern-combat-5",
+            "description": "Modern Combat 5 is a classic mobile FPS offering online multiplayer, numerous classes and fast-paced warfare. :contentReference[oaicite:1]{index=1}",
+            "ratings": "4.4",
+            "developer": "Gameloft"
+        }];
 
     const totalSlides = images.length;
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -63,7 +87,7 @@ const BannerSlider = () => {
 
     const FeaturedImage = () => {
         const placeholderUrl = `https://placehold.co/600x400/1e293b/ffffff?text=${encodeURIComponent(currentImage.title.toUpperCase())}+IMAGE`;
-        const imageSrc = (!currentImage.src || imageError) ? placeholderUrl : currentImage.src;
+        const imageSrc = (!currentImage.coverPhoto || imageError) ? placeholderUrl : currentImage.coverPhoto;
 
         return (
             <div className="w-full flex justify-center items-center">
@@ -71,11 +95,12 @@ const BannerSlider = () => {
                     src={imageSrc}
                     alt={`${currentImage.title} Banner Image`}
                     className="w-full max-h-[300px] sm:max-h-[350px] md:max-h-[450px] object-cover rounded-xl shadow-2xl transition duration-500"
-                    onError={() => currentImage.src && setImageError(true)}
+                    onError={() => currentImage.coverPhoto && setImageError(true)}
                 />
             </div>
         );
     };
+
 
     return (
         <div className="pt-20 pb-10 px-4 sm:px-6 md:px-10 flex justify-center">
@@ -102,7 +127,7 @@ const BannerSlider = () => {
                                 </motion.h2>
 
                                 <p className="text-gray-300 text-base sm:text-lg md:text-xl mb-6">
-                                    Deploy, survive, and conquer the battlefield! Experience intense battle royale action and stunning graphics. Click "View Details" for mission specs.
+                                    Deploy, survive, and conquer the battlefield! Click "View Details" for more info.
                                 </p>
 
                                 <motion.div

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
 import Swal from "sweetalert2";
+import Loader from "../Components/Loader";
 
 const MyGames = () => {
     const [myGames, setMyGames] = useState([]);

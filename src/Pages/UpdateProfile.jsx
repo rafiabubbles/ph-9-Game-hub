@@ -21,7 +21,7 @@ const UpdateProfile = () => {
                 showConfirmButton: false,
                 timer: 1500,
             });
-            navigate("/my-profile"); // redirect back
+            navigate("/my-profile");
         } else {
             Swal.fire({
                 icon: "error",

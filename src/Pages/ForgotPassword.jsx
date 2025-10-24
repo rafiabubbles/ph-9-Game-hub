@@ -24,7 +24,7 @@ const ForgotPassword = () => {
         }
 
         try {
-            await sendPasswordResetEmail(auth, email);
+            await sendPasswordResetEmail(auth, emai);
             Swal.fire({
                 icon: "success",
                 title: "Reset Email Sent",

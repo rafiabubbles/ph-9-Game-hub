@@ -15,7 +15,7 @@ const MyGames = () => {
 
         loadGames();
 
-        // Listen to custom event "myGamesUpdated" to update state immediately
+
         window.addEventListener("myGamesUpdated", loadGames);
 
         return () => {
@@ -29,7 +29,7 @@ const MyGames = () => {
         setMyGames(updated);
         localStorage.setItem("myGames", JSON.stringify(updated));
 
-        // Trigger custom event so any page/component listening can update
+
         window.dispatchEvent(new Event("myGamesUpdated"));
 
         Swal.fire({

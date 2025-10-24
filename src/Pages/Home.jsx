@@ -9,13 +9,13 @@ const Home = () => {
 
     // Fetch JSON from public folder safely
     useEffect(() => {
-        fetch('/HomeData.json') // file is in public/
+        fetch('/HomeData.json') // file is in public
             .then((res) => res.json())
             .then((data) => setGameData(data))
             .catch((err) => console.error('Error loading JSON:', err));
     }, []);
 
-    const featuredGames = gameData.slice(0, 6); // Show only first 6 games
+    const featuredGames = gameData.slice(0, 6);
 
     return (
         <div className="bg-gray-50 min-h-screen">
@@ -31,8 +31,7 @@ const Home = () => {
                 <div className="mt-10 flex justify-center">
                     <Link
                         to="/games"
-                        className="px-6 py-3 bg-gradient-to-r from-[#8a2be2] to-[#ff00ff] 
-                                   hover:from-[#6a0dad] hover:to-[#c71585] text-white rounded-xl 
+                        className="px-6 py-3 bg-gradient-to-r from-[#8a2be2] to-[#ff00ff]                                    hover:from-[#6a0dad] hover:to-[#c71585] text-white rounded-xl 
                                    transition font-semibold shadow-lg"
                     >
                         View All Games

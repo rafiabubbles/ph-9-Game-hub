@@ -1,6 +1,6 @@
-import React, { useState, useEffect, Suspense } from "react";
+import React, { useState, Suspense } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
+import GameData from "../../public/HomeData.json";
 import { FaStar } from "react-icons/fa";
 import { HiArrowRight } from "react-icons/hi";
 
@@ -57,14 +57,6 @@ const overlayVariants = {
 
 const GameCard = () => {
     const [hoveredCardId, setHoveredCardId] = useState(null);
-    const [GameData, setGameData] = useState([]);
-
-    useEffect(() => {
-        fetch("/HomeData.json")
-            .then((res) => res.json())
-            .then((data) => setGameData(data))
-            .catch((err) => console.error("Error loading HomeData.json:", err));
-    }, []);
 
     return (
         <div className="p-6 md:p-10">

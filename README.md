@@ -1,16 +1,54 @@
-# React + Vite
+#  PH-9 Game Hub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Game Hub ](/src/assets/web.png)
 
-Currently, two official plugins are available:
+## Overview
+PH-9 Game Hub is an interactive web application where users can explore and play multiple small games.  
+It is built with modern React (18+) and showcases responsive UI, dynamic components, and state management.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live Demo
+🔗 [Live Site](https://ph-9-game-hub.vercel.app)
 
-## React Compiler
+## Technologies Used
+- **React 18+**  
+- **Vite** (for fast development & hot module replacement)  
+- **CSS** (for styling)  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
+- Interactive game selection  
+- Responsive design for all devices  
+- Smooth gameplay with React state management  
+- Easy navigation between games  
 
-## Expanding the ESLint configuration
+## Dependencies
+- react  
+- react-dom  
+- vite  
+- @vitejs/plugin-react  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started (Local Setup)
+1. Clone the repository:  
+  
+   git clone https://github.com/rafiabubbles/ph-9-Game-hub.git
+
+
+2. Navigate into the project directory:
+   cd ph-9-Game-hub
+
+3. Install dependencies:
+   npm install
+
+4. Run the project locally:
+
+
+   npm run dev
+
+5. Open the browser at the provided localhost link.
+
+## Main Features
+
+* Play multiple small games in one platform
+* Fully interactive UI with React components
+* Dynamic game state management
+
+
